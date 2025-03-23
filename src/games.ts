@@ -114,7 +114,7 @@ Features:
 Humanity's last hope is half-human, half-machine - all hero!`,
     tags: ['sci-fi', 'new'],
     thumbnailUrl: 'https://img.cdn.famobi.com/portal/html5games/images/tmp/GoEscapeTeaser.jpg',
-    gameUrl: 'https://play.famobi.com/go-escape', // 更新为指向真实的类似游戏
+    gameUrl: 'https://games.cdn.famobi.com/html5games/w/western-sniper/v040/?fg_domain=play.famobi.com&fg_aid=A1000-111&fg_uid=dce582f0-3659-4cdb-9c7a-d8d2eea38cd0&fg_pid=e37ab3ce-88cd-4438-9b9c-a37df5d33736&fg_beat=668&original_ref=https%3A%2F%2Fplay.famobi.com%2Fwestern-sniper', // 更新为指向真实的类似游戏
     featured: false,
     controls: 'Use WASD or arrow keys to move. Mouse to aim. Left click to fire primary weapon, right click for secondary weapon.'
   },
