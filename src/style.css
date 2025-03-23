@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-apple-gray-900;
+    font-family: 'Noto Serif SC', serif;
+    background-image: url('https://img.freepik.com/premium-vector/landscape-painting-style-traditional-chinese-ink-wash-depicting-mountains-flying-birds-fog-white-background_873674-6797.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    font-family: 'Noto Serif SC', serif;
+  }
+}
+
+@layer components {
+  .game-card {
+    @apply bg-white bg-opacity-90 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl backdrop-blur-sm;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .game-iframe-container {
+    @apply w-full relative bg-black;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+
+  .game-iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white hover:bg-opacity-80;
+  }
+
+  .game-title {
+    @apply text-2xl font-bold mb-2;
+    color: #333;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .game-description {
+    @apply mb-4 line-clamp-2;
+    color: #555;
+  }
+
+  /* 侧边栏样式 */
+  .sidebar-tag {
+    @apply flex items-center transition-colors;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .sidebar-tag.active {
+    @apply bg-black text-white font-medium;
+  }
+
+  /* 游戏详情页样式 */
+  .prose {
+    @apply text-apple-gray-800;
+  }
+
+  .prose h3 {
+    @apply text-xl font-bold mt-6 mb-3;
+    color: #333;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-6 space-y-2;
+  }
+
+  /* 游戏窗口样式 */
+  .game-window {
+    @apply bg-white bg-opacity-95 rounded-xl shadow-2xl overflow-hidden cursor-move transition-shadow duration-300;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .game-window.dragging {
+    @apply shadow-2xl;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .game-title-bar {
+    @apply bg-black text-white px-4 py-3 flex items-center justify-between cursor-move select-none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* 返回按钮 */
+  .back-button {
+    @apply flex items-center text-white bg-black hover:bg-opacity-80 transition-colors rounded-md px-4 py-2;
+  }
+
+  /* 移动端样式 */
+  @media (max-width: 768px) {
+    .mobile-sidebar {
+      @apply fixed top-[64px] left-0 right-0 bg-white bg-opacity-90 shadow-lg z-40 p-4 max-h-[80vh] overflow-y-auto backdrop-blur-sm;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* 移动端游戏窗口 */
+    .game-window {
+      @apply w-full !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+    }
+  }
+
+  /* 游戏标签 */
+  .game-tag {
+    @apply px-2 py-1 rounded-full text-xs inline-block;
+    background-color: rgba(200, 200, 200, 0.5);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* 水墨风格元素 */
+  .ink-border {
+    @apply border-2 border-black border-opacity-50 relative;
+  }
+
+  .ink-border-blur {
+    @apply absolute -inset-0.5 bg-transparent rounded-xl blur-sm opacity-30 -z-10;
+  }
+}

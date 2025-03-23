@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monster Survivors - Best Online Monster Survival Games | MonsterSurvivors.com</title>
+  <meta name="description" content="Play free Monster Survivors games online. Battle endless hordes of monsters and survive as long as possible in these thrilling roguelike games.">
+  <link rel="canonical" href="https://monstersurvivors.com/" />
+
+  <!-- Open Graph / Social Media Tags -->
+  <meta property="og:title" content="Monster Survivors - Best Online Monster Survival Games">
+  <meta property="og:description" content="Play free Monster Survivors games online. Battle endless hordes of monsters and survive as long as possible.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://monstersurvivors.com/">
+  <meta property="og:image" content="https://images.forfun.com/v2/fetch/0a/0a4bf65c347275b3b4092e2286d61f9a.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- 导入字体 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap">
+
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Monster Survivors",
+      "url": "https://monstersurvivors.com/",
+      "description": "Play free Monster Survivors games online. Battle endless hordes of monsters and survive as long as possible in these thrilling roguelike games.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://monstersurvivors.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <script type="module" src="/src/main.ts"></script>
+</head>
+
+<body class="min-h-screen">
+  <header class="bg-black bg-opacity-80 text-white py-4 shadow-md sticky top-0 z-50 backdrop-blur-sm">
+    <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="https://images.forfun.com/v2/fetch/0a/0a4bf65c347275b3b4092e2286d61f9a.jpeg" alt="Monster Survivors Logo" class="w-10 h-10 rounded-full">
+        <span class="text-2xl font-bold" style="font-family: 'Noto Serif SC', serif;">MonsterSurvivors</span>
+      </a>
+      <div class="flex items-center">
+        <!-- Search bar -->
+        <div class="hidden md:block relative mr-4">
+          <form id="search-form" class="flex items-center">
+            <input
+              type="text"
+              id="search-input"
+              class="py-1.5 px-3 pr-10 rounded-md border-2 border-apple-gray-200 focus:border-black focus:outline-none text-apple-gray-900 w-60 bg-opacity-80 bg-white"
+              placeholder=""
+              data-i18n-placeholder="searchGames">
+            <button
+              type="submit"
+              class="absolute right-2 text-apple-gray-600 hover:text-black transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <!-- 语言切换按钮 -->
+        <div class="language-switcher mr-6 relative">
+          <button id="language-button" class="flex items-center space-x-1 hover:text-gray-300 transition-colors">
+            <span id="current-language" style="font-family: 'Noto Serif SC', serif;">English</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="language-dropdown" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg overflow-hidden hidden z-10">
+            <ul class="py-1">
+              <li>
+                <button data-lang="en" class="w-full text-left px-4 py-2 text-apple-gray-900 hover:bg-apple-gray-100 transition-colors">English</button>
+              </li>
+              <li>
+                <button data-lang="zh" class="w-full text-left px-4 py-2 text-apple-gray-900 hover:bg-apple-gray-100 transition-colors">中文</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="hidden md:flex space-x-6" style="font-family: 'Noto Serif SC', serif;">
+          <a href="/" class="hover:text-gray-300 transition-colors" data-i18n="home">Home</a>
+          <a href="/tag/all" class="hover:text-gray-300 transition-colors" data-i18n="allGames">All Games</a>
+          <a href="/tag/popular" class="hover:text-gray-300 transition-colors" data-i18n="popular">Popular</a>
+          <a href="/tag/new" class="hover:text-gray-300 transition-colors" data-i18n="newGames">New Games</a>
+        </nav>
+        <button class="md:hidden text-2xl mobile-menu-button ml-4" aria-label="Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex flex-col md:flex-row container mx-auto px-4 md:px-6 py-8">
+    <!-- 左侧边栏 -->
+    <aside id="sidebar" class="hidden md:block w-full md:w-64 shrink-0 md:mr-8 mb-6 md:mb-0 bg-white rounded-xl shadow-md overflow-hidden opacity-90 backdrop-blur-sm">
+      <!-- 侧边栏内容由 JavaScript 动态生成 -->
+    </aside>
+
+    <!-- 主内容区域 -->
+    <main id="main-content" class="flex-1">
+      <!-- 主内容由 JavaScript 动态生成 -->
+    </main>
+  </div>
+</body>
+</html>
